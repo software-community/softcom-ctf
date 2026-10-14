@@ -1,16 +1,21 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <div class="container">
-    <a href="{{ url_for('views.static_html', route='/') }}" class="navbar-brand">
-      {% if Configs.ctf_logo %}
-        <img
-            class="img-responsive ctf_logo"
-            src="{{ url_for('views.files', path=Configs.ctf_logo) }}"
-            alt="{{ Configs.ctf_name }}"
-            height="25"
-        >
-      {% else %}
-        {{ Configs.ctf_name }}
-      {% endif %}
+    <a href="{{ url_for('views.static_html', route='/') }}" class="navbar-brand d-inline-flex align-items-center gap-2" style="text-decoration: none;">
+      <img
+          class="softcom-nav-logo"
+          src="{{ url_for('views.themes', path='img/softcom_circle.png') }}"
+          alt="SoftCom Logo"
+          width="36"
+          height="36"
+          style="width: 36px !important; height: 36px !important; max-width: 36px !important; max-height: 36px !important; border-radius: 50% !important; object-fit: cover !important; display: inline-block !important; vertical-align: middle !important; box-shadow: 0 0 10px rgba(59, 130, 246, 0.5) !important;"
+      >
+      <span class="softcom-brand-title" style="font-size: 1.15rem; font-weight: 700; color: #ffffff; vertical-align: middle;">
+        {% if Configs.ctf_name and Configs.ctf_name != 'CTFd' %}
+          {{ Configs.ctf_name }}
+        {% else %}
+          SoftCom
+        {% endif %}
+      </span>
     </a>
 
     <button

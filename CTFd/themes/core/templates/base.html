@@ -10,6 +10,7 @@
 
   {% block stylesheets %}
     {{ Assets.css("assets/scss/main.scss") }}
+    <link rel="stylesheet" href="{{ url_for('views.themes', path='css/softcom.css') }}">
   {% endblock %}
 
   {{ Plugins.styles }}
@@ -51,11 +52,18 @@
 
 <footer class="footer">
   <div class="container text-center">
-    <a href="https://ctfd.io" class="text-secondary">
-      <small class="text-muted">
-        {% trans %}Powered by CTFd{% endtrans %}
-      </small>
-    </a>
+    <div class="footer-softcom-badge">
+      <img
+        src="{{ url_for('views.themes', path='img/softcom_circle.png') }}"
+        alt="SoftCom Logo"
+        class="footer-softcom-logo"
+        width="24"
+        height="24"
+        style="width: 24px !important; height: 24px !important; border-radius: 50% !important; object-fit: cover !important;"
+      >
+      <span class="footer-softcom-text">Software Community, IIT Ropar</span>
+    </div>
+    <span class="footer-subtext">Indian Institute of Technology Ropar</span>
   </div>
 </footer>
 
