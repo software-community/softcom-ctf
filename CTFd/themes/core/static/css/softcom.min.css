@@ -1,0 +1,258 @@
+/* SoftCom IIT Ropar Theme Enhancement for CTFd */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-family-sans-serif: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-monospace: 'JetBrains Mono', Menlo, Monaco, Consolas, monospace;
+  --sc-primary: #3b82f6;
+  --sc-primary-hover: #2563eb;
+  --sc-primary-glow: rgba(59, 130, 246, 0.35);
+  --sc-bg-dark: #090d16;
+  --sc-card-bg: rgba(18, 26, 43, 0.75);
+  --sc-card-border: rgba(255, 255, 255, 0.08);
+  --sc-navbar-bg: rgba(10, 15, 26, 0.82);
+  --sc-text-main: #f8fafc;
+  --sc-text-muted: #94a3b8;
+}
+
+body {
+  font-family: var(--font-family-sans-serif) !important;
+  background-color: var(--sc-bg-dark) !important;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.10) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(14, 165, 233, 0.08) 0px, transparent 50%) !important;
+  background-attachment: fixed !important;
+  color: var(--sc-text-main) !important;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Modern Glass Navbar */
+.navbar {
+  background: var(--sc-navbar-bg) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+  padding: 0.75rem 1rem !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbar-brand {
+  font-weight: 700 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.65rem !important;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 9999px !important;
+  transition: transform 0.2s ease, opacity 0.2s ease !important;
+}
+
+.navbar-brand:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.softcom-nav-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 14px var(--sc-primary-glow);
+  background: #111827;
+  transition: all 0.25s ease;
+}
+
+.navbar-brand:hover .softcom-nav-logo {
+  border-color: var(--sc-primary);
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.6);
+}
+
+.softcom-brand-title {
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.4px !important;
+  background: linear-gradient(135deg, #ffffff 30%, #93c5fd 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.nav-link {
+  font-weight: 500 !important;
+  font-size: 0.925rem !important;
+  color: var(--sc-text-muted) !important;
+  padding: 0.5rem 0.85rem !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Jumbotron / Header */
+.jumbotron {
+  background: transparent !important;
+  padding: 3.5rem 1rem 2rem !important;
+  text-align: center !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 2rem !important;
+}
+
+.jumbotron h1 {
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+  font-size: 2.75rem !important;
+  background: linear-gradient(180deg, #ffffff 20%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cards & Containers */
+.card {
+  background: var(--sc-card-bg) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--sc-card-border) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.card:hover {
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Form Controls */
+.form-control, .form-select {
+  background-color: rgba(15, 23, 42, 0.75) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #f8fafc !important;
+  border-radius: 10px !important;
+  padding: 0.65rem 0.9rem !important;
+  font-size: 0.95rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: rgba(15, 23, 42, 0.95) !important;
+  border-color: var(--sc-primary) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important;
+  color: #ffffff !important;
+}
+
+.form-control::placeholder {
+  color: #64748b !important;
+}
+
+/* Premium Buttons */
+.btn {
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  padding: 0.55rem 1.25rem !important;
+  letter-spacing: -0.01em !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--sc-primary) 0%, var(--sc-primary-hover) 100%) !important;
+  border: none !important;
+  box-shadow: 0 4px 14px var(--sc-primary-glow) !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%) !important;
+  transform: translateY(-1.5px) !important;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5) !important;
+}
+
+.btn-primary:active {
+  transform: translateY(0) !important;
+}
+
+.btn-outline-primary {
+  border: 1px solid rgba(59, 130, 246, 0.4) !important;
+  color: #60a5fa !important;
+}
+
+.btn-outline-primary:hover {
+  background: var(--sc-primary) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px var(--sc-primary-glow) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Nav Pills / Tabs */
+.nav-pills {
+  background: rgba(15, 23, 42, 0.6) !important;
+  padding: 0.35rem !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  display: inline-flex !important;
+}
+
+.nav-pills .nav-link {
+  color: var(--sc-text-muted) !important;
+  border-radius: 8px !important;
+  padding: 0.5rem 1.15rem !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background: var(--sc-primary) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 10px var(--sc-primary-glow) !important;
+}
+
+/* Footer Styling */
+footer.footer {
+  margin-top: 4rem !important;
+  padding: 2.25rem 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
+  background: rgba(10, 15, 26, 0.75) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+.footer-softcom-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.35rem 0.9rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+}
+
+.footer-softcom-badge:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.35);
+  transform: translateY(-1px);
+}
+
+.footer-softcom-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-softcom-text {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  letter-spacing: 0.3px;
+}
+
+.footer-subtext {
+  display: block;
+  font-size: 0.775rem;
+  color: #64748b;
+  margin-top: 0.4rem;
+}
